@@ -38,3 +38,9 @@ console.log(
   "First Full Time Wage earned on Day:",
   firstFullTimeDay ? firstFullTimeDay[0] : "Never"
 );
+
+// e. Check if Every Element of Full Time Wage is truly holding Full time wage
+let isAllFullTime = [...empDailyWageMap.values()].every(
+  (wage) => wage === FULL_TIME_HOURS * WAGE_PER_HOUR
+);
+console.log("Every Element is Full Time Wage:", isAllFullTime);
